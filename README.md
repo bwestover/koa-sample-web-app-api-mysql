@@ -290,6 +290,12 @@ create table User (
   unique  key Email (Email(24))
 ) engine=InnoDB charset=utf8 auto_increment=100001;
 ```
+#### Create a user and grant privileges:
+```sql
+-- Modify 'demo' to a password of your choosing
+create user 'koa-sample'@'localhost' IDENTIFIED BY 'demo';
+grant all privileges on `koa-sample-sandbox`.* TO 'koa-sample'@'localhost';
+```
 
 ## Test data
 
